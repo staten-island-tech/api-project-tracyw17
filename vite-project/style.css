@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+}
+
+.left-side,
+.right-side {
+    width: 50%;
+    text-align: center;
+}
+
+caption {
+    font-size: 3rem;
+}
+
+th {
+    font-size: 1.5em;
+}
+
+table {
+    margin: 2rem;
+    font-size: 1em;
+}
+
+td {
+    padding: 1rem;
+}
+
+.text-field,
+.select-field,
+.submit-field {
+    margin: 2rem;
+}
+
+.card {
+    width: 30%;
+    text-align: center;
+    background-color: pink;
+    display: inline-block;
+}
+
+.heading {
+    text-align: center;
+}

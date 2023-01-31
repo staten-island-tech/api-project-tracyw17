@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <h1 class="heading">
+      Taylor Swift Lyric Generator
+    </h1>
+    <div class="container">
+      <div class="left-side">
+        <form id="form">
+          <div class="text-field">
+            <label for="name">Name</label>
+          <input type="text" id="name" class="text-box" required>
+          </div>
+          <div class="select-field">
+            <label for="album">Album</label>
+            <input type="radio" id="album" name="type" class="mc">
+            <label for="song">Song</label>
+            <input type="radio" id="song" name="type" class="mc">
+          </div>
+          <div class="submit-field">
+            <input type="submit" id="submit" class="submit btn">
+          </div>
+        </form>
+        <div class="display">
+
+        </div>
+      </div>
+      <div class="right-side">
+        <table class="history">
+          <caption>Lyric History</caption>
+        </table>
+        <p id="empty">Enter a song or album name to start!</p>
+      </div>
+    </div>
+  
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
