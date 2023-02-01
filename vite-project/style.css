@@ -1,29 +1,82 @@
-.container {
-    display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap%27');
+
+body {
+    background-color: #CBB9DF;
+    color: #361D73;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
-.left-side,
-.right-side {
-    width: 50%;
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.main {
+    display: flex;
     text-align: center;
+    margin: auto;
+}
+
+.right-side {
+    position: absolute;
+    right: 2rem;
 }
 
 caption {
     font-size: 3rem;
+    padding: 0 4rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+}
+
+#name {
+    margin: auto;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+
+form {
+    text-align: center;
+    margin-left: 10rem;
+    position: absolute;
+    font-size: 2em;
+    border: 10px solid #361D73;
+    border-radius: 12px;
+    background-color: #C4ABD8;
+    height: 20rem;
+}
+
+.select-field {
+    margin-top: 1rem;
+}
+
+.btn {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #361D73;
+    color: #CBB9DF;
 }
 
 th {
     font-size: 1.5em;
+    padding-right: 2rem;
 }
 
 table {
-    margin: 2rem;
-    font-size: 1em;
+    font-size: 1.7rem;
+    overflow-wrap: normal;
+}
+
+.quote {
+    width: 30rem;
 }
 
 td {
     padding: 1rem;
 }
+
 
 .text-field,
 .select-field,
@@ -32,7 +85,7 @@ td {
 }
 
 .card {
-    width: 30%;
+    padding: 2rem;
     text-align: center;
     background-color: pink;
     display: inline-block;
@@ -40,4 +93,48 @@ td {
 
 .heading {
     text-align: center;
+    font-size: 6em;
+    margin-bottom: 6rem;
+
+}
+
+.right-side {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.polaroid {
+    width: 700px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+}
+
+caption {
+    font-size: 3em;
+}
+
+.polaroid .caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.display {
+    font-size: 2em;
 }

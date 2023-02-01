@@ -5,8 +5,8 @@ const selectors = {
     song: document.querySelector("#song"),
     name: document.querySelector("#name"),
     display: document.querySelector(".display"),
-    history: document.querySelector(".history"),
-    empty: document.querySelector("#empty")
+    empty: document.querySelector("#empty"),
+    right: document.querySelector(".right-side")
   };
   
   export { selectors };

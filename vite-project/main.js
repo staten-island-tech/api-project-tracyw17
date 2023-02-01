@@ -1,5 +1,6 @@
 import './style.css'
 import { selectors } from "./DOMselectors";
+import { covers } from "./covers"
 
 const URL = "https://taylorswiftapi.onrender.com";
 let history = []
@@ -30,12 +31,14 @@ async function random_album(album, url){
 }
 
 function display(set){
+  let bum = set.album.toLowerCase();
   return `
-    <div class="card">
-      <h1>${set.album}</h1>
-      <h2>${set.song}</h2>
-      <p>${set.quote}</p>
-    </div>
+      <div class="polaroid">
+        <img src=${covers[bum]}>
+        <h1>${set.album}</h1>
+        <h2>${set.song}</h2>
+        <p>${set.quote}</p>
+      </div>
   `
 }
 
@@ -44,7 +47,7 @@ function history_display(set){
   <tr class="row">
     <td class="column">${set.album}</td>
     <td class="column">${set.song}</td>
-    <td class="column">${set.quote}</td>
+    <td class="column quote">${set.quote}</td>
   </tr>
   `
 }
@@ -64,14 +67,21 @@ selectors.form.addEventListener('submit', function(e){
     if (el != null) {
       history.push(el);
       selectors.display.innerHTML = display(el);
-      selectors.history.innerHTML = `
-      <caption>Lyric History</caption>
-      <tr class="row">
+      selectors.right.innerHTML = `
+      <table class="history">
+          <caption>Lyric History</caption>
+          <tr class="row">
         <th class="column">Album</th>
         <th class="column">Song</th>
         <th class="column">Lyric</th>
-      </tr>`
+      </tr>
+        </table>
+      `
+      selectors["history"] = document.querySelector(".history")
       history.forEach((set) => selectors.history.insertAdjacentHTML("beforeend", history_display(set)))
+    }
+    else{
+      selectors.display.innerHTML = "Song or Album doesn't exist";
     }
     selectors.empty.innerHTML = ""
   });
