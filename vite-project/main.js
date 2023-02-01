@@ -35,9 +35,12 @@ function display(set){
   return `
       <div class="polaroid">
         <img src=${covers[bum]}>
+        <div class="caption">
         <h1>${set.album}</h1>
         <h2>${set.song}</h2>
         <p>${set.quote}</p>
+      </div>
+        
       </div>
   `
 }
@@ -46,7 +49,7 @@ function history_display(set){
   return `
   <tr class="row">
     <td class="column">${set.album}</td>
-    <td class="column">${set.song}</td>
+    <td class="column song">${set.song}</td>
     <td class="column quote">${set.quote}</td>
   </tr>
   `
